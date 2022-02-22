@@ -1,0 +1,7 @@
+---
+Name: fio-last-word
+---
+
+SilverStripe\ORM\FieldType\DBString:
+  extensions:
+    fioLastWord: Fromholdio\LastWord\DBStringExtension

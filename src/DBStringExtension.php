@@ -6,7 +6,7 @@ use SilverStripe\Core\Extension;
 
 class DBStringExtension extends Extension
 {
-    public function getHasMoreThanOneWord()
+    public function getHasMoreThanOneWord(): bool
     {
         if ($this->getOwner()->exists()) {
             $value = $this->getOwner()->RAW();
@@ -17,7 +17,7 @@ class DBStringExtension extends Extension
         return false;
     }
 
-    public function getWithoutLastWord()
+    public function getWithoutLastWord(): ?string
     {
         if ($this->getOwner()->exists()) {
             $value = $this->getOwner()->RAW();
@@ -32,7 +32,7 @@ class DBStringExtension extends Extension
         return null;
     }
 
-    public function getLastWord()
+    public function getLastWord(): ?string
     {
         if ($this->getOwner()->exists()) {
             $value = $this->getOwner()->RAW();
